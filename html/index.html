@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<title>Loket Disnaker</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="wrap" class="hidden">
+    <div id="counter">
+
+      <!-- ============ HEADER ============ -->
+      <header id="counter-head">
+        <div id="head-text">
+          <span id="head-eyebrow">Dinas Ketenagakerjaan Kota Zaheer</span>
+          <h1 id="head-title">Loket Pembelian Barang</h1>
+        </div>
+        <button id="btn-close" title="Tutup">&times;</button>
+      </header>
+
+      <div id="counter-body">
+
+        <!-- ============ PANEL KIRI: SEGEL DANA ============ -->
+        <aside id="treasury-panel">
+
+          <div id="seal">
+            <svg id="seal-ring" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="54" class="seal-track" />
+              <circle cx="60" cy="60" r="54" class="seal-fill" id="seal-fill" />
+            </svg>
+            <div id="seal-center">
+              <span id="seal-currency">Rp</span>
+              <span id="seal-amount">0</span>
+            </div>
+          </div>
+
+          <p id="treasury-caption">Dana Pemerintah Tersedia</p>
+          <p id="treasury-status">Memuat data loket&hellip;</p>
+
+          <div id="cart-summary">
+            <div class="row">
+              <span>Barang dipilih</span>
+              <span id="sum-count">0</span>
+            </div>
+            <div class="row" id="sum-total-row">
+              <span>Total diterima</span>
+              <span id="sum-total">Rp0</span>
+            </div>
+          </div>
+
+          <button id="btn-sell" disabled>Ajukan Penjualan</button>
+          <p id="sell-hint">Ketik jumlah barang di sebelah kanan, lalu ajukan.</p>
+
+        </aside>
+
+        <!-- ============ PANEL KANAN: DAFTAR HARGA ============ -->
+        <main id="ledger-panel">
+          <div id="ledger-head-row">
+            <span class="col-name">Barang</span>
+            <span class="col-price">Harga/pcs</span>
+            <span class="col-qty">Jumlah</span>
+            <span class="col-sub">Subtotal</span>
+          </div>
+
+          <div id="ledger-rows"><!-- diisi via JS --></div>
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
